@@ -39,7 +39,7 @@ jobs:
       run: cmake --build . --config $BUILD_TYPE
       
     - name: Upload
-    - uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: OG-Injector-Linux
         path: ${{github.workspace}}/build/OG-Injector-Linux
