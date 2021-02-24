@@ -373,6 +373,9 @@ Testing
 Makefile
 cmake_install.cmake
 install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
 
 
 ## Ignore VS Code CMake temporary files, build results.
@@ -397,6 +400,3 @@ test.txt
 **/nls.*.json
 **/*.nls.json
 **/*.nls.*.json
-compile_commands.json
-CTestTestfile.cmake
-_deps
