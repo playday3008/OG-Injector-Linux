@@ -373,6 +373,30 @@ Testing
 Makefile
 cmake_install.cmake
 install_manifest.txt
+
+
+## Ignore VS Code CMake temporary files, build results.
+##
+## Get latest from https://github.com/microsoft/vscode-cmake-tools/blob/develop/.gitignore
+.vscode-test/
+build/
+dist/
+node_modules/
+out/
+test/fakebin/
+vscode-extensions-localization-export/
+vscode-translations-import/
+.ci-build
+.DS_Store
+debug.log
+npm-debug.log
+package-lock.json
+test.txt
+*.db*
+*.vsix
+**/nls.*.json
+**/*.nls.json
+**/*.nls.*.json
 compile_commands.json
 CTestTestfile.cmake
 _deps
