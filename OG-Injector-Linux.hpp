@@ -12,7 +12,7 @@
 namespace fs = std::filesystem;
 
 #include <cpuid.h>
-#include <limits.h>
+#include <climits>
 #include <sys/types.h>
 #include <unistd.h>
 

@@ -22,15 +22,15 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cerrno>
 #include <dlfcn.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/mman.h>
 #include <unistd.h>
-#include <limits.h>
+#include <climits>
 #include "OG-Injector-Lib-internal.hpp"
 
 int injector_attach(injector_t **injector_out, pid_t pid)

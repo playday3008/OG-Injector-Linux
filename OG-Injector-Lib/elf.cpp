@@ -22,8 +22,8 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 #include <elf.h>
 #include "OG-Injector-Lib-internal.hpp"
 
@@ -57,12 +57,13 @@ int injector__collect_libc_information(injector_t *injector)
     size_t sym_num = 0;
     size_t sym_entsize = 0;
     size_t dlopen_st_name;
-    size_t dlopen_offset;
+    size_t dlopen_offset = 0;
     size_t dlclose_st_name;
-    size_t dlclose_offset;
+    size_t dlclose_offset = 0;
     Elf_Sym sym;
     size_t idx;
     int rv;
+    char* unused __attribute__((unused));
 
     rv = open_libc(&fp, pid, &libc_addr);
     if (rv != 0) {
@@ -92,7 +93,7 @@ int injector__collect_libc_information(injector_t *injector)
         case SHT_STRTAB:
             fgetpos(fp, &pos);
             fseek(fp, shstrtab_offset + shdr.sh_name, SEEK_SET);
-            fgets(buf, sizeof(buf), fp);
+            unused = fgets(buf, sizeof(buf), fp);
             fsetpos(fp, &pos);
             if (strcmp(buf, ".dynstr") == 0) {
                 str_offset = shdr.sh_offset;
@@ -102,7 +103,7 @@ int injector__collect_libc_information(injector_t *injector)
         case SHT_DYNSYM:
             fgetpos(fp, &pos);
             fseek(fp, shstrtab_offset + shdr.sh_name, SEEK_SET);
-            fgets(buf, sizeof(buf), fp);
+            unused = fgets(buf, sizeof(buf), fp);
             fsetpos(fp, &pos);
             if (strcmp(buf, ".dynsym") == 0) {
                 sym_offset = shdr.sh_offset;

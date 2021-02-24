@@ -24,13 +24,13 @@
  */
 #ifndef INJECTOR_INTERNAL_H
 #define INJECTOR_INTERNAL_H 1
-#include <stdarg.h>
-#include <stdint.h>
-#include <string.h>
+#include <cstdarg>
+#include <cstdint>
+#include <cstring>
 #include <sys/types.h>
 #include <sys/user.h>
 #include <sys/ptrace.h>
-#include <errno.h>
+#include <cerrno>
 #include "OG-Injector-Lib.hpp"
 
 #ifdef __LP64__
