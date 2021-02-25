@@ -170,7 +170,7 @@ int main(int argc, char** argv)
     #pragma endregion
 
     if (fs::exists(fs::path(soname.c_str())))
-        cout << "Library: " << soname << " found" << endl;
+        cout << "\033[1mLibrary: " << soname << " found" << "\033[0m" << endl;
     else {
         cerr << "\033[31mCan't find: " << soname << "\033[0m" << endl;
         cout << "Press any key to continue..." << endl;
@@ -180,7 +180,7 @@ int main(int argc, char** argv)
 
     pid_t pid = findProcess(PROCESS_NAME);
     if (pid != INVALID_PID) 
-        cout << "Found process '" << PROCESS_NAME << "' with PID: " << pid << endl;
+        cout << "\033[1mFound process '" << PROCESS_NAME << "' with PID: " << pid << "\033[0m" << endl;
     else {
         cerr << "\033[31mCan't find: " << PROCESS_NAME << "\033[0m" << endl;
         cout << "Press any key to continue..." << endl;
@@ -188,8 +188,8 @@ int main(int argc, char** argv)
         return EXIT_FAILURE;
     }
     
-    cout << "\033[1mProcess: " << PROCESS_NAME << " found with PID: " << pid << "\033[0m" << endl <<
-        "Injecting " << soname << " into " << PROCESS_NAME << endl;
+    cout << "\033[1mProcess: " << PROCESS_NAME << " found with PID: " << pid << endl <<
+        "Injecting " << soname << " into " << PROCESS_NAME << "\033[0m" << endl;
 
     injector_t *injector;
 
