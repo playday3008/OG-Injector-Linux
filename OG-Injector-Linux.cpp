@@ -54,7 +54,7 @@ inline static auto findProcess(const string name)
     for (auto& p : fs::directory_iterator(*dir.get())) {
         // Check if folder name contains only numbers
         auto path = make_unique<string>(p.path().filename().string());
-        if (!ranges::all_of(path->begin(), path->end(), ::isdigit))
+        if (!all_of(path->begin(), path->end(), ::isdigit))
             continue;
 
         // Path to process
