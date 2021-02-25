@@ -1,7 +1,23 @@
 ﻿{
   "configurations": [
     {
-      "name": "WSL-GCC-Debug (x64)",
+      "name": "WSL-GCC-Release (ARM)",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeExecutable": "cmake",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "linux_arm" ],
+      "variables": [],
+      "intelliSenseMode": "linux-gcc-arm",
+      "wslPath": "${defaultWSLPath}",
+      "addressSanitizerRuntimeFlags": "detect_leaks=0"
+    },
+    {
+      "name": "WSL-GCC-Debug (ARM)",
       "generator": "Ninja",
       "configurationType": "Debug",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
@@ -10,11 +26,27 @@
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
-      "inheritEnvironments": [ "linux_x64" ],
+      "inheritEnvironments": [ "linux_arm" ],
+      "variables": [],
+      "intelliSenseMode": "linux-gcc-arm",
+      "wslPath": "${defaultWSLPath}",
+      "addressSanitizerRuntimeFlags": "detect_leaks=0"
+    },
+    {
+      "name": "WSL-GCC-Release (x32)",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeExecutable": "cmake",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "linux_x86" ],
       "wslPath": "${defaultWSLPath}",
       "addressSanitizerRuntimeFlags": "detect_leaks=0",
       "variables": [],
-      "intelliSenseMode": "linux-gcc-x64"
+      "intelliSenseMode": "linux-gcc-x86"
     },
     {
       "name": "WSL-GCC-Debug (x32)",
@@ -49,20 +81,20 @@
       "intelliSenseMode": "linux-gcc-x64"
     },
     {
-      "name": "WSL-GCC-Release (x32)",
+      "name": "WSL-GCC-Debug (x64)",
       "generator": "Ninja",
-      "configurationType": "Release",
+      "configurationType": "Debug",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
       "cmakeExecutable": "cmake",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
-      "inheritEnvironments": [ "linux_x86" ],
+      "inheritEnvironments": [ "linux_x64" ],
       "wslPath": "${defaultWSLPath}",
       "addressSanitizerRuntimeFlags": "detect_leaks=0",
       "variables": [],
-      "intelliSenseMode": "linux-gcc-x86"
+      "intelliSenseMode": "linux-gcc-x64"
     }
   ]
 }
