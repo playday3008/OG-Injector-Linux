@@ -2,7 +2,7 @@
   "configurations": [
     {
       "name": "WSL-GCC-Release (ARM)",
-      "generator": "Ninja",
+      "generator": "Unix Makefiles",
       "configurationType": "Release",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
@@ -11,14 +11,65 @@
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
       "inheritEnvironments": [ "linux_arm" ],
-      "variables": [],
+      "variables": [
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "/usr/bin/g++-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_AR",
+          "value": "/usr/bin/g++-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_RANLIB",
+          "value": "/usr/bin/g++-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "/usr/bin/gcc-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_AR",
+          "value": "/usr/bin/gcc-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_RANLIB",
+          "value": "/usr/bin/gcc-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD",
+          "value": "20",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD_REQUIRED",
+          "value": "ON",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_EXTENSIONS",
+          "value": "OFF",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-Wall -Wno-unknown-pragmas -Wno-comment -std=c++2a -lstdc++fs",
+          "type": "STRING"
+        }
+      ],
       "intelliSenseMode": "linux-gcc-arm",
       "wslPath": "${defaultWSLPath}",
       "addressSanitizerRuntimeFlags": "detect_leaks=0"
     },
     {
       "name": "WSL-GCC-Debug (ARM)",
-      "generator": "Ninja",
+      "generator": "Unix Makefiles",
       "configurationType": "Debug",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
@@ -27,14 +78,65 @@
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
       "inheritEnvironments": [ "linux_arm" ],
-      "variables": [],
+      "variables": [
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "/usr/bin/g++-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_AR",
+          "value": "/usr/bin/g++-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_RANLIB",
+          "value": "/usr/bin/g++-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "/usr/bin/gcc-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_AR",
+          "value": "/usr/bin/gcc-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_RANLIB",
+          "value": "/usr/bin/gcc-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD",
+          "value": "20",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD_REQUIRED",
+          "value": "ON",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_EXTENSIONS",
+          "value": "OFF",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-Wall -Wno-unknown-pragmas -Wno-comment -std=c++2a -lstdc++fs",
+          "type": "STRING"
+        }
+      ],
       "intelliSenseMode": "linux-gcc-arm",
       "wslPath": "${defaultWSLPath}",
       "addressSanitizerRuntimeFlags": "detect_leaks=0"
     },
     {
       "name": "WSL-GCC-Release (x32)",
-      "generator": "Ninja",
+      "generator": "Unix Makefiles",
       "configurationType": "Release",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
@@ -45,12 +147,63 @@
       "inheritEnvironments": [ "linux_x86" ],
       "wslPath": "${defaultWSLPath}",
       "addressSanitizerRuntimeFlags": "detect_leaks=0",
-      "variables": [],
+      "variables": [
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "/usr/bin/g++-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_AR",
+          "value": "/usr/bin/g++-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_RANLIB",
+          "value": "/usr/bin/g++-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "/usr/bin/gcc-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_AR",
+          "value": "/usr/bin/gcc-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_RANLIB",
+          "value": "/usr/bin/gcc-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD",
+          "value": "20",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD_REQUIRED",
+          "value": "ON",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_EXTENSIONS",
+          "value": "OFF",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-Wall -Wno-unknown-pragmas -Wno-comment -std=c++2a -lstdc++fs",
+          "type": "STRING"
+        }
+      ],
       "intelliSenseMode": "linux-gcc-x86"
     },
     {
       "name": "WSL-GCC-Debug (x32)",
-      "generator": "Ninja",
+      "generator": "Unix Makefiles",
       "configurationType": "Debug",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
@@ -61,12 +214,63 @@
       "inheritEnvironments": [ "linux_x86" ],
       "wslPath": "${defaultWSLPath}",
       "addressSanitizerRuntimeFlags": "detect_leaks=0",
-      "variables": [],
+      "variables": [
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "/usr/bin/g++-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_AR",
+          "value": "/usr/bin/g++-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_RANLIB",
+          "value": "/usr/bin/g++-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "/usr/bin/gcc-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_AR",
+          "value": "/usr/bin/gcc-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_RANLIB",
+          "value": "/usr/bin/gcc-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD",
+          "value": "20",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD_REQUIRED",
+          "value": "ON",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_EXTENSIONS",
+          "value": "OFF",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-Wall -Wno-unknown-pragmas -Wno-comment -std=c++2a -lstdc++fs",
+          "type": "STRING"
+        }
+      ],
       "intelliSenseMode": "linux-gcc-x86"
     },
     {
       "name": "WSL-GCC-Release (x64)",
-      "generator": "Ninja",
+      "generator": "Unix Makefiles",
       "configurationType": "Release",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
@@ -77,12 +281,63 @@
       "inheritEnvironments": [ "linux_x64" ],
       "wslPath": "${defaultWSLPath}",
       "addressSanitizerRuntimeFlags": "detect_leaks=0",
-      "variables": [],
+      "variables": [
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "/usr/bin/g++-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_AR",
+          "value": "/usr/bin/g++-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_RANLIB",
+          "value": "/usr/bin/g++-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "/usr/bin/gcc-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_AR",
+          "value": "/usr/bin/gcc-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_RANLIB",
+          "value": "/usr/bin/gcc-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD",
+          "value": "20",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD_REQUIRED",
+          "value": "ON",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_EXTENSIONS",
+          "value": "OFF",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-Wall -Wno-unknown-pragmas -Wno-comment -std=c++2a -lstdc++fs",
+          "type": "STRING"
+        }
+      ],
       "intelliSenseMode": "linux-gcc-x64"
     },
     {
       "name": "WSL-GCC-Debug (x64)",
-      "generator": "Ninja",
+      "generator": "Unix Makefiles",
       "configurationType": "Debug",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
@@ -93,7 +348,58 @@
       "inheritEnvironments": [ "linux_x64" ],
       "wslPath": "${defaultWSLPath}",
       "addressSanitizerRuntimeFlags": "detect_leaks=0",
-      "variables": [],
+      "variables": [
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "/usr/bin/g++-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_AR",
+          "value": "/usr/bin/g++-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER_RANLIB",
+          "value": "/usr/bin/g++-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "/usr/bin/gcc-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_AR",
+          "value": "/usr/bin/gcc-ar-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_C_COMPILER_RANLIB",
+          "value": "/usr/bin/gcc-ranlib-10",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD",
+          "value": "20",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_STANDARD_REQUIRED",
+          "value": "ON",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_EXTENSIONS",
+          "value": "OFF",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-Wall -Wno-unknown-pragmas -Wno-comment -std=c++2a -lstdc++fs",
+          "type": "STRING"
+        }
+      ],
       "intelliSenseMode": "linux-gcc-x64"
     }
   ]
