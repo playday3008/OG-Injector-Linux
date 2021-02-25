@@ -16,31 +16,6 @@
           "name": "CMAKE_CXX_COMPILER",
           "value": "/usr/bin/g++-10",
           "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_C_COMPILER",
-          "value": "/usr/bin/gcc-10",
-          "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD",
-          "value": "20",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD_REQUIRED",
-          "value": "ON",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_EXTENSIONS",
-          "value": "OFF",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_FLAGS",
-          "value": "-Wall -Wno-unknown-pragmas -Wno-comment",
-          "type": "STRING"
         }
       ],
       "intelliSenseMode": "linux-gcc-arm",
@@ -63,31 +38,6 @@
           "name": "CMAKE_CXX_COMPILER",
           "value": "/usr/bin/g++-10",
           "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_C_COMPILER",
-          "value": "/usr/bin/gcc-10",
-          "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD",
-          "value": "20",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD_REQUIRED",
-          "value": "ON",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_EXTENSIONS",
-          "value": "OFF",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_FLAGS",
-          "value": "-Wall -Wno-unknown-pragmas -Wno-comment",
-          "type": "STRING"
         }
       ],
       "intelliSenseMode": "linux-gcc-arm",
@@ -112,31 +62,6 @@
           "name": "CMAKE_CXX_COMPILER",
           "value": "/usr/bin/g++-10",
           "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_C_COMPILER",
-          "value": "/usr/bin/gcc-10",
-          "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD",
-          "value": "20",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD_REQUIRED",
-          "value": "ON",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_EXTENSIONS",
-          "value": "OFF",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_FLAGS",
-          "value": "-Wall -Wno-unknown-pragmas -Wno-comment",
-          "type": "STRING"
         }
       ],
       "intelliSenseMode": "linux-gcc-x86"
@@ -159,31 +84,6 @@
           "name": "CMAKE_CXX_COMPILER",
           "value": "/usr/bin/g++-10",
           "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_C_COMPILER",
-          "value": "/usr/bin/gcc-10",
-          "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD",
-          "value": "20",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD_REQUIRED",
-          "value": "ON",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_EXTENSIONS",
-          "value": "OFF",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_FLAGS",
-          "value": "-Wall -Wno-unknown-pragmas -Wno-comment",
-          "type": "STRING"
         }
       ],
       "intelliSenseMode": "linux-gcc-x86"
@@ -206,31 +106,6 @@
           "name": "CMAKE_CXX_COMPILER",
           "value": "/usr/bin/g++-10",
           "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_C_COMPILER",
-          "value": "/usr/bin/gcc-10",
-          "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD",
-          "value": "20",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD_REQUIRED",
-          "value": "ON",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_EXTENSIONS",
-          "value": "OFF",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_FLAGS",
-          "value": "-Wall -Wno-unknown-pragmas -Wno-comment",
-          "type": "STRING"
         }
       ],
       "intelliSenseMode": "linux-gcc-x64"
@@ -253,31 +128,6 @@
           "name": "CMAKE_CXX_COMPILER",
           "value": "/usr/bin/g++-10",
           "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_C_COMPILER",
-          "value": "/usr/bin/gcc-10",
-          "type": "FILEPATH"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD",
-          "value": "20",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_STANDARD_REQUIRED",
-          "value": "ON",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_EXTENSIONS",
-          "value": "OFF",
-          "type": "STRING"
-        },
-        {
-          "name": "CMAKE_CXX_FLAGS",
-          "value": "-Wall -Wno-unknown-pragmas -Wno-comment",
-          "type": "STRING"
         }
       ],
       "intelliSenseMode": "linux-gcc-x64"
