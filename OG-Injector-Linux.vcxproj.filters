@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="OG-Injector-Linux.cpp" />
+    <ClCompile Include="OG-Injector-Lib\elf.cpp">
+      <Filter>OG-Injector-Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="OG-Injector-Lib\OG-Injector-Lib.cpp">
+      <Filter>OG-Injector-Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="OG-Injector-Lib\ptrace.cpp">
+      <Filter>OG-Injector-Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="OG-Injector-Lib\remote_call.cpp">
+      <Filter>OG-Injector-Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="OG-Injector-Lib\util.cpp">
+      <Filter>OG-Injector-Lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="OG-Injector-Lib">
+      <UniqueIdentifier>{94c86940-4532-4db3-9d8b-226f8beafc62}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OG-Injector-Lib\OG-Injector-Lib.hpp">
+      <Filter>OG-Injector-Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="OG-Injector-Lib\OG-Injector-Lib-internal.hpp">
+      <Filter>OG-Injector-Lib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
