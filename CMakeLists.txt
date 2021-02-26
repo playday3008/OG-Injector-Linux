@@ -8,3 +8,4 @@ target_compile_options(${PROJECT_NAME} PRIVATE -Wall
 												 -Wno-comment)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD_REQUIRED ON CXX_EXTENSIONS OFF)
+target_link_libraries(${PROJECT_NAME} -static)
