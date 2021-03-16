@@ -11,6 +11,18 @@ constexpr auto LIBRARY_NAME = "library.so";
 //#define GOESP
 //#define BETA
 
+// Terminal colored output
+#define RESET   "\033[0m"
+#define BLACK   "\033[30m"      /* Black */
+#define RED     "\033[31m"      /* Red */
+#define GREEN   "\033[32m"      /* Green */
+#define YELLOW  "\033[33m"      /* Yellow */
+#define BLUE    "\033[34m"      /* Blue */
+#define MAGENTA "\033[35m"      /* Magenta */
+#define CYAN    "\033[36m"      /* Cyan */
+#define WHITE   "\033[37m"      /* White */
+#define BOLD	"\033[1m"       /* Bold */
+
 #if (defined(OSIRIS) || defined(GOESP))
 // Check CPU supported features
 inline void checkinst(array<bool, 3>& inst)
@@ -85,29 +97,29 @@ int main(int argc, char** argv)
 {
     #pragma region Logo
 
-    cout << "\033[1;31m   ____       _      _         __   __________  ___________ ____ " << endl;
+    cout << BOLD << RED << "   ____       _      _         __   __________  ___________ ____ " << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;32m  / __ \\_____(_)____(_)____   / /  / ____/ __ \\/ ____/ ___// __ \\" << endl;
+    cout << BOLD << GREEN << "  / __ \\_____(_)____(_)____   / /  / ____/ __ \\/ ____/ ___// __ \\" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;33m / / / / ___/ / ___/ / ___/  / /  / / __/ / / / __/  \\__ \\/ /_/ /" << endl;
+    cout << BOLD << YELLOW << " / / / / ___/ / ___/ / ___/  / /  / / __/ / / / __/  \\__ \\/ /_/ /" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;34m/ /_/ (__  ) / /  / (__  )  / /  / /_/ / /_/ / /___ ___/ / ____/ " << endl;
+    cout << BOLD << BLUE << "/ /_/ (__  ) / /  / (__  )  / /  / /_/ / /_/ / /___ ___/ / ____/ " << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;35m\\____/____/_/_/  /_/____/  / /   \\____/\\____/_____//____/_/      " << endl;
+    cout << BOLD << MAGENTA << "\\____/____/_/_/  /_/____/  / /   \\____/\\____/_____//____/_/      " << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;36m    ____  __            __///                                    " << endl;
+    cout << BOLD << CYAN << "    ____  __            __///                                    " << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;31m   / __ \\/ /___ ___  __/ __ \\____ ___  __                        " << endl;
+    cout << BOLD << RED << "   / __ \\/ /___ ___  __/ __ \\____ ___  __                        " << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;32m  / /_/ / / __ `/ / / / / / / __ `/ / / /                        " << endl;
+    cout << BOLD << GREEN << "  / /_/ / / __ `/ / / / / / / __ `/ / / /                        " << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;33m / ____/ / /_/ / /_/ / /_/ / /_/ / /_/ /                         " << endl;
+    cout << BOLD << YELLOW << " / ____/ / /_/ / /_/ / /_/ / /_/ / /_/ /                         " << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;34m/_/   /_/\\__,_/\\__, /_____/\\__,_/\\__, /                          " << endl;
+    cout << BOLD << BLUE << "/_/   /_/\\__,_/\\__, /_____/\\__,_/\\__, /                          " << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;35m              /____/            /____/                           " << endl << endl;
+    cout << BOLD << MAGENTA << "              /____/            /____/                           " << endl << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << "\033[1;37mBuild: " __DATE__ ", " __TIME__ "\033[0m\n" << endl << endl;
+    cout << BOLD << WHITE << "Build: " __DATE__ ", " __TIME__ RESET << endl << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
 
     #pragma endregion
@@ -116,9 +128,9 @@ int main(int argc, char** argv)
     auto euid = geteuid();
     if (ptrace_scope == 49 && euid) {
         cerr << "If you want run injector without root privileges you need to change '/proc/sys/kernel/yama/ptrace_scope' variable to 0" << endl;
-        cerr << "Use this command to do this: \033[1mecho 1 | sudo tee /proc/sys/kernel/yama/ptrace_scope\033[0m" << endl;
+        cerr << "Use this command to do this: " << RED << "echo 1 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl;
         cerr << "After injectoin you can return the value back" << endl;
-        cerr << "Use this command to do this: \033[1mecho 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope\033[0m" << endl << endl;
+        cerr << "Use this command to do this: " << RED << "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl << endl;
         cerr << "If you dont want to change any kernel variable, you can just run this injector as root" << endl;
         if (WIFEXITED(system("which sudo > /dev/null 2>&1")))
             cout << "Use this command to do this: sudo " << argv[0] << endl << endl;
@@ -129,12 +141,12 @@ int main(int argc, char** argv)
     else if (ptrace_scope == 48 && euid) {
         cout << "Detected disabled kernel variable '/proc/sys/kernel/yama/ptrace_scope'" << endl;
         cout << "If you changed it from '1' to '0' only in order to launch the injector, then change it back to '0' after the injection" << endl;
-        cout << "Use this command to do this: \033[1mecho 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope\033[0m" << endl;
+        cout << "Use this command to do this: " << RED << "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl;
     }
     else if (ptrace_scope == -1 && euid) {
-        cerr << "\033[31mPlease restart injector as root\033[0m" << endl;
+        cerr << RED << "Please restart injector as root" << RESET << endl;
         if (WIFEXITED(system("which sudo > /dev/null 2>&1")))
-            cout << "Use this command to do this: \033[1msudo " << argv[0] << "\033[0m" << endl << endl;
+            cout << "Use this command to do this: " << RED << "sudo " << argv[0] << RESET << endl << endl;
         cout << "Press any key to continue..." << endl;
         cin.get();
         return EXIT_FAILURE;
@@ -170,9 +182,9 @@ int main(int argc, char** argv)
     #pragma endregion
 
     if (fs::exists(fs::path(soname.c_str())))
-        cout << "\033[1mLibrary: " << soname << " found" << "\033[0m" << endl;
+        cout << BOLD << "Library: " << soname << " found" << RESET << endl;
     else {
-        cerr << "\033[31mCan't find: " << soname << "\033[0m" << endl;
+        cerr << RED << "Can't find: " << soname << RESET << endl;
         cout << "Press any key to continue..." << endl;
         cin.get();
         return EXIT_FAILURE;
@@ -180,30 +192,30 @@ int main(int argc, char** argv)
 
     pid_t pid = findProcess(PROCESS_NAME);
     if (pid != INVALID_PID) 
-        cout << "\033[1mFound process '" << PROCESS_NAME << "' with PID: " << pid << "\033[0m" << endl;
+        cout << BOLD << "Found process '" << PROCESS_NAME << "' with PID: " << pid << RESET << endl;
     else {
-        cerr << "\033[31mCan't find: " << PROCESS_NAME << "\033[0m" << endl;
+        cerr << RED << "Can't find: " << PROCESS_NAME << RESET << endl;
         cout << "Press any key to continue..." << endl;
         cin.get();
         return EXIT_FAILURE;
     }
     
-    cout << "\033[1mProcess: " << PROCESS_NAME << " found with PID: " << pid << endl <<
-        "Injecting " << soname << " into " << PROCESS_NAME << "\033[0m" << endl;
+    cout << BOLD << "Process: " << PROCESS_NAME << " found with PID: " << pid << endl <<
+        "Injecting " << soname << " into " << PROCESS_NAME << RESET << endl;
 
     injector_t *injector;
 
     if (injector_attach(&injector, pid) != 0) {
-        cerr << "\033[31mCan't attach injector to '" << PROCESS_NAME << "'\033[0m" << endl;
+        cerr << RED << "Can't attach injector to '" << PROCESS_NAME << "'" << RESET << endl;
         cerr << injector_error() << endl;
         cout << "Press any key to continue..." << endl;
         cin.get();
         return EXIT_FAILURE;
     }
     if (injector_inject(injector, soname.c_str(), NULL) == 0)
-        cout << "\033[1;32mSuccessfully injected '" << soname.c_str() << "' into '" << PROCESS_NAME << "'\033[0m" << endl;
+        cout << BOLD << GREEN << "Successfully injected '" << soname.c_str() << "' into '" << PROCESS_NAME << "'" << RESET << endl;
     else {
-        cerr << "\033[31mCan't inject " << soname.c_str() << "' into '" << PROCESS_NAME << "'\033[0m" << endl;
+        cerr << RED << "Can't inject " << soname.c_str() << "' into '" << PROCESS_NAME << "'" << RESET << endl;
         cerr << injector_error() << endl;
         cout << "Press any key to continue..." << endl;
         cin.get();
@@ -211,7 +223,7 @@ int main(int argc, char** argv)
     }
     injector_detach(injector);
 
-	cout << "\033[1mYou have 5 seconds to read this information, GOODBYE\033[0m" << endl;
+	cout << BOLD << "You have 5 seconds to read this information, GOODBYE" << RESET << endl;
 	this_thread::sleep_for(chrono::seconds(5));
 
     return EXIT_SUCCESS;
