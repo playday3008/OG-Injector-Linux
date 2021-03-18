@@ -97,27 +97,27 @@ int main(int argc, char** argv)
 {
     #pragma region Logo
 
-    cout << BOLD << RED << "   ____       _      _         __   __________  ___________ ____ " << endl;
+    cout << BOLD << RED << "   ____  ______   ____        _           __" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << GREEN << "  / __ \\_____(_)____(_)____   / /  / ____/ __ \\/ ____/ ___// __ \\" << endl;
+    cout << BOLD << GREEN << "  / __ \\/ ____/  /  _/___    (_)__  _____/ /_____  _____" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << YELLOW << " / / / / ___/ / ___/ / ___/  / /  / / __/ / / / __/  \\__ \\/ /_/ /" << endl;
+    cout << BOLD << YELLOW << " / / / / / __    / // __ \\  / / _ \\/ ___/ __/ __ \\/ ___//" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << BLUE << "/ /_/ (__  ) / /  / (__  )  / /  / /_/ / /_/ / /___ ___/ / ____/ " << endl;
+    cout << BOLD << BLUE << "/ /_/ / /_/ /  _/ // / / / / /  __/ /__/ /_/ /_/ / /" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << MAGENTA << "\\____/____/_/_/  /_/____/  / /   \\____/\\____/_____//____/_/      " << endl;
+    cout << BOLD << MAGENTA << "\\____/\\____/  /___/_/ /_/_/ /\\___/\\___/\\__/\\____/_/" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << CYAN << "    ____  __            __///                                    " << endl;
+    cout << BOLD << CYAN << "    ____  __           /___/" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << RED << "   / __ \\/ /___ ___  __/ __ \\____ ___  __                        " << endl;
+    cout << BOLD << RED << "   / __ \\/ /___ ___  __/ __ \\____ ___  __" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << GREEN << "  / /_/ / / __ `/ / / / / / / __ `/ / / /                        " << endl;
+    cout << BOLD << GREEN << "  / /_/ / / __ `/ / / / / / / __ `/ / / /" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << YELLOW << " / ____/ / /_/ / /_/ / /_/ / /_/ / /_/ /                         " << endl;
+    cout << BOLD << YELLOW << " / ____/ / /_/ / /_/ / /_/ / /_/ / /_/ /" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << BLUE << "/_/   /_/\\__,_/\\__, /_____/\\__,_/\\__, /                          " << endl;
+    cout << BOLD << BLUE << "/_/   /_/\\__,_/\\__, /_____/\\__,_/\\__, /" << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
-    cout << BOLD << MAGENTA << "              /____/            /____/                           " << endl << endl;
+    cout << BOLD << MAGENTA << "              /____/            /____/" << endl << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
     cout << BOLD << WHITE << "Build: " __DATE__ ", " __TIME__ << RESET << endl << endl;
     this_thread::sleep_for(chrono::milliseconds(50));
