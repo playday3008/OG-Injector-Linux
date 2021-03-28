@@ -141,7 +141,7 @@ int main(int argc, char** argv)
     else if (ptrace_scope == 48 && euid) {
         cout << "Detected disabled kernel variable '/proc/sys/kernel/yama/ptrace_scope'" << endl;
         cout << "If you changed it from '1' to '0' only in order to launch the injector, then change it back to '0' after the injection" << endl;
-        cout << "Use this command to do this: " << YELLOW << "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl;
+        cout << "Use this command to do this: " << YELLOW << "echo 1 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl;
     }
     else if (ptrace_scope == -1 && euid) {
         cerr << BOLD << RED << "Please restart injector as root" << RESET << endl;
