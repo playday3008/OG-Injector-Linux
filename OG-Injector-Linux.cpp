@@ -128,9 +128,9 @@ int main(int argc, char** argv)
     auto euid = geteuid();
     if (ptrace_scope == 49 && euid) {
         cerr << "If you want run injector without root privileges you need to change '/proc/sys/kernel/yama/ptrace_scope' variable to 0" << endl;
-        cerr << "Use this command to do this: " << BOLD << RED << "echo 1 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl;
+        cerr << "Use this command to do this: " << BOLD << RED << "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl;
         cerr << "After injectoin you can return the value back" << endl;
-        cerr << "Use this command to do this: " << BOLD << RED << "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl << endl;
+        cerr << "Use this command to do this: " << BOLD << RED << "echo 1 | sudo tee /proc/sys/kernel/yama/ptrace_scope" << RESET << endl << endl;
         cerr << "If you dont want to change any kernel variable, you can just run this injector as root" << endl;
         if (WIFEXITED(system("which sudo > /dev/null 2>&1")))
             cout << "Use this command to do this: " << BOLD << RED << "sudo " << argv[0] << RESET << endl << endl;
